@@ -6,10 +6,16 @@ use clap::Parser;
 
 fn main() {
     let args = Args::parse();
-    let mut file = fs::File::open(args.file).unwrap();
+    let mut file = fs::File::open(args.file).unwrap_or_else(|err| {
+        eprintln!("Error: {}", err);
+        process::exit(1);
+    });
 
     let mut buffer = Vec::new();
-    file.read_to_end(&mut buffer);
+    if let Err(err) = file.read_to_end(&mut buffer) {
+        eprintln!("Error: {}", err);
+        process::exit(1);
+    }
 
     let strings = collect_strings(&buffer, args.number);
     println!("{}", strings.join("\n"));
