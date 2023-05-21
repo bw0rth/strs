@@ -1,5 +1,5 @@
 <h1 align="left">
-  <a href="https://github.com/brenw0rth/strs"><img src="identicon.png" alt="strs" width=50></a>
+  <a href="https://github.com/brenw0rth/strs"><img src="identicon.png" width=50></a>
   strs
 </h1>
 
