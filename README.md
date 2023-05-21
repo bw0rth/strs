@@ -13,12 +13,6 @@
   <a href="https://gitHub.com/brenw0rth/strs/network/members">
     <img src="https://badgen.net/github/forks/brenw0rth/strs">
   </a>
-
-  </br>
-
-  <a href="https://github.com/brenw0rth/strs/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/brenw0rth/strs">
-  </a>
 </p>
 
 ## Name
