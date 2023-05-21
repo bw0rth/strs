@@ -1,5 +1,3 @@
-#![allow(unused)]
-
 use std::fs;
 use std::io::Read;
 use std::process;
@@ -7,7 +5,7 @@ use std::process;
 use clap::Parser;
 
 fn main() {
-    let args = Cli::parse();
+    let args = Args::parse();
     let mut file = fs::File::open(args.file).unwrap();
 
     let mut buffer = Vec::new();
@@ -15,11 +13,13 @@ fn main() {
 
     let strings = collect_strings(&buffer, args.number);
     println!("{}", strings.join("\n"));
+
+    process::exit(0);
 }
 
 /// Display printable strings within a given file
 #[derive(Parser)]
-struct Cli {
+struct Args {
     /// Minimum number of printable characters
     #[arg(short, default_value_t = 4)]
     number: usize,
