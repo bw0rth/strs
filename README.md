@@ -16,7 +16,7 @@
 </p>
 
 ## Name
-**strs** - Display printable strings within a given file.
+**strs** - display printable strings within a given file.
 
 ## Synopsis
 
