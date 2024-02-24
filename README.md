@@ -30,4 +30,4 @@
 
 | Option         | Description
 | :------------- | :----------
-| -n             | Minimum number of printable characters [default: 4]
+| -n             | Minimum number of printable characters per line [default: 4]
